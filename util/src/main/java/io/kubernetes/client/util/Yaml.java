@@ -484,7 +484,7 @@ public class Yaml {
                               + modelClass.getSimpleName()));
 
       desc.substituteProperty(
-          targetGsonAnnotation, field.getType(), getterMethod.getName(), setterMethod.getName());
+          field.getName(), field.getType(), getterMethod.getName(), setterMethod.getName());
       excluding.add(field.getName());
     }
     desc.setExcludes(excluding.toArray(new String[0]));
